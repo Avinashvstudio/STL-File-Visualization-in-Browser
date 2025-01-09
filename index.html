@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js STL Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #loading-spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <input type="file" id="file-input" accept=".stl">
+        <button id="load-btn">Load</button>
+    </div>
+    <div id="loading-spinner" style="display: none;">
+        <p>Loading STL file...</p>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
